@@ -51,7 +51,7 @@ const Navbar = (props) => {
               className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
                 <a>Feature</a>
@@ -74,17 +74,17 @@ const Navbar = (props) => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <details>
                 <summary>Feature</summary>
-                <ul className="p-2">
+                <ul className="p-2 w-36 bg-[#151515]">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>Dashboard</a>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <a>Rekomendasi</a>
                   </li>
                 </ul>
               </details>
@@ -96,7 +96,7 @@ const Navbar = (props) => {
         </div>
         <div className="navbar-end hidden lg:flex">
           <a
-            href="/Login"
+            href="/Auth/Login"
             className="btn btn-primary btn-sm px-4 font-normal text-white"
           >
             Login

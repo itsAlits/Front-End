@@ -123,7 +123,7 @@ export default function Home() {
             </form>
             <p className="text-[13px] text-white">
               Tidak Mempunyai Akun?{" "}
-              <a href="/Register" className="text-blue-400 underline">
+              <a href="/Auth/Register" className="text-blue-400 underline">
                 Daftar Disini
               </a>
             </p>
