@@ -66,14 +66,16 @@ export default function Page() {
           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
           PREFIX d: <http://www.semanticweb.org/alitwira/ontologies/2024/9/untitled-ontology-3#>
 
-          SELECT * 
+         SELECT * 
           WHERE {
             ?film rdf:type d:Film.
             ?film d:Judul ?judul.
             ?film d:Image_Url ?imgUrl.
             ?film d:Sinopsis ?sinopsis.
             ?film d:Rating ?rating.
+            ?film d:Trailer ?trailer.
           }
+          ORDER BY DESC(?rating)
         `;
 
         // Send the query as form-urlencoded data
@@ -95,6 +97,7 @@ export default function Page() {
             imageUrl: binding.imgUrl.value,
             overview: binding.sinopsis.value, // Placeholder if not available
             rating: binding.rating.value, // Placeholder if not available
+            trailer: binding.trailer.value, // Placeholder if not available
           })
         );
 
@@ -163,6 +166,7 @@ export default function Page() {
                 links={film.imageUrl}
                 vote={film.rating}
                 namaFilm={film.title}
+                trailer={film.trailer}
               />
             ))}
           </div>
