@@ -79,12 +79,12 @@ const Navbar = (props) => {
             <li>
               <details>
                 <summary>Feature</summary>
-                <ul className="p-2 w-36 bg-[#151515]">
+                <ul className="p-2 w-36 bg-[#222222]">
                   <li>
-                    <a>Dashboard</a>
+                    <a href="Auth/Login">Dashboard</a>
                   </li>
                   <li>
-                    <a>Rekomendasi</a>
+                    <a href="Auth/Login">Rekomendasi</a>
                   </li>
                 </ul>
               </details>

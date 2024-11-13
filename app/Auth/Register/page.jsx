@@ -75,7 +75,7 @@ export default function Home() {
               {/* form */}
               <div className="gap-2 xl:flex">
                 <div className="w-full">
-                  <label className="input input-bordered my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -93,7 +93,7 @@ export default function Home() {
                       required
                     />
                   </label>
-                  <label className="input input-bordered my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -120,7 +120,7 @@ export default function Home() {
                   </label>
                 </div>
                 <div className="w-full">
-                  <label className="input input-bordered my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -142,7 +142,7 @@ export default function Home() {
                       required
                     />
                   </label>
-                  <label className="input input-bordered my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -191,7 +191,7 @@ export default function Home() {
             </form>
             <p className="text-[13px] text-white">
               Sudah Mempunyai Akun?{" "}
-              <a href="/Login" className="text-blue-400 underline">
+              <a href="/Auth/Login" className="text-blue-400 underline">
                 Masuk Disini
               </a>
             </p>

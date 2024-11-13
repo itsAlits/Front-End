@@ -50,7 +50,7 @@ export const Sidebar = (props) => {
         <div className="flex flex-1 flex-col justify-between">
           <nav className="-mx-3 space-y-6">
             {/* Fitur menu sidebar */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <label className="px-3 text-xs uppercase text-white">
                 Feature
               </label>
@@ -80,7 +80,7 @@ export const Sidebar = (props) => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
-                  stroke="currentColor"
+                  stroke={props.activeIcon2}
                   className="size-5"
                 >
                   <path
@@ -98,7 +98,7 @@ export const Sidebar = (props) => {
                 <span className={props.styleActive2}>Rekomendasi</span>
               </a>
 
-              <a className={props.active3} href="/Pencarian">
+              {/* <a className={props.active3} href="/Pencarian">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -115,13 +115,13 @@ export const Sidebar = (props) => {
                 </svg>
 
                 <span className={props.styleActive3}>Pencarian</span>
-              </a>
+              </a> */}
             </div>
 
             {/* end fitur menu sidebar */}
 
             {/* account menu sidebar */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <label className="px-3 text-xs uppercase text-white">
                 Account
               </label>

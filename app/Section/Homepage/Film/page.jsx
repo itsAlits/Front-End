@@ -1,4 +1,5 @@
 import React from "react";
+import TrailerSection from "../Trailer2/Trailer";
 
 export default function page() {
   const trendFilms = [
@@ -12,7 +13,7 @@ export default function page() {
     },
     {
       image:
-        "https://lumiere-a.akamaihd.net/v1/images/p_insideout2_3634_disneyplus_012e1639.jpeg",
+        "https://lumiere-a.akamaihd.net/v1/images/p_insideout_19751_af12286c.jpeg?region=0%2C0%2C540%2C810",
     },
     {
       image:
@@ -84,7 +85,7 @@ export default function page() {
     },
     {
       image:
-        "https://lh3.googleusercontent.com/proxy/Njmv04NhYep83xE2FQ26vx85PHA5h2hyywfSTAXcOcXLR4Se2-2FZ2QdU4B_6SONqshWUyd2dQaK2Z9_zLJlpuIxCGi2oazmxdZBi6cqTZgVrXGlDXiE2w",
+        "https://image.tmdb.org/t/p/original/nKchSvJ8iMshj2kuUyquZLOoOyS.jpg",
     },
     {
       image:
@@ -101,10 +102,9 @@ export default function page() {
         <div className="mt-[-200px] px-6 lg:px-12">
           <div className="flex items-center justify-between pb-4">
             <div>
-              <h1 className="text-2xl font-semibold text-primary">
-                Must Watch
+              <h1 className="text-2xl font-semibold text-white">
+                Wajib Ditonton
               </h1>
-              <p className="text-sm mb-2">Film yang wajib kamu tonton</p>
             </div>
             <a className="flex gap-2" href="/Login">
               See More{" "}
@@ -124,9 +124,10 @@ export default function page() {
               </svg>
             </a>
           </div>
+
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
             {trendFilms.map((film, index) => (
-              <a href="/Login" className=" hover:scale-105 transition-all">
+              <a href="Auth/Login" className=" hover:scale-105 transition-all">
                 <img
                   key={index}
                   className="h-full w-full rounded object-cover"
@@ -139,14 +140,15 @@ export default function page() {
         </div>
       </section>
 
+      <div className="mb-10">
+        <TrailerSection />
+      </div>
+
       <section id="NewTranding" className="w-full py-10">
         <div className="mt-[-40px] px-6 lg:px-12">
           <div className="flex items-center justify-between pb-4">
             <div>
-              <h1 className="text-2xl font-semibold text-primary">
-                New Release
-              </h1>
-              <p className="text-sm mb-2">Film yang baru tayang di Bioskop</p>
+              <h1 className="text-2xl font-semibold text-white">Baru Keluar</h1>
             </div>
             <a className="flex gap-2" href="/Login">
               See More{" "}
@@ -168,7 +170,7 @@ export default function page() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
             {newFilms.map((film, index) => (
-              <a href="/Login" className=" hover:scale-105 transition-all">
+              <a href="Auth/Login" className=" hover:scale-105 transition-all">
                 <img
                   key={index}
                   className="h-full w-full rounded object-cover"
@@ -185,8 +187,7 @@ export default function page() {
         <div className="mt-[-40px] px-6 lg:px-12">
           <div className="flex items-center justify-between pb-4">
             <div>
-              <h1 className="text-2xl font-semibold text-primary">For Kids</h1>
-              <p className="text-sm mb-2">Film untuk nemenin si buah hati </p>
+              <h1 className="text-2xl font-semibold text-white">Untuk Anak</h1>
             </div>
             <a className="flex gap-2" href="/Login">
               See More{" "}
@@ -208,7 +209,7 @@ export default function page() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
             {kidsFilms.map((film, index) => (
-              <a href="/Login" className=" hover:scale-105 transition-all">
+              <a href="Auth/Login" className=" hover:scale-105 transition-all">
                 <img
                   key={index}
                   className="h-full w-full rounded object-cover"

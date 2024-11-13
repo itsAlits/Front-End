@@ -11,7 +11,7 @@ export default function Carousel() {
       genre2: "Animation",
       time: "1h 39m",
       rating: "6.6",
-      linksTrailer: "#",
+      linksTrailer: "https://www.youtube.com/watch?v=GXaMT5pX12w",
     },
     {
       image:
@@ -20,9 +20,9 @@ export default function Carousel() {
       desc: "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves.",
       genre1: "Action",
       genre2: "Comedy",
-      time: "2h 20m",
-      rating: "7.5",
-      linksTrailer: "#",
+      time: "1h 55m",
+      rating: "6.6",
+      linksTrailer: "https://www.youtube.com/watch?v=hRFY_Fesa9Q&t=6s",
     },
     {
       image:
@@ -31,20 +31,20 @@ export default function Carousel() {
       desc: "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
       genre1: "Adventure",
       genre2: "Animation",
-      time: "",
-      rating: "",
-      linksTrailer: "#",
+      time: "1h 36m",
+      rating: "7.6",
+      linksTrailer: "https://www.youtube.com/watch?v=LEjhY15eCx0&t=11s",
     },
     {
       image:
         "https://www.joblo.com/wp-content/uploads/2024/05/Beetlejuice-Beetlejuice-Empire-featured.jpg",
       title: "Beetlejuice Beetlejuice",
       desc: "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Beetlejuice, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.",
-      genre1: "Adventure",
+      genre1: "Comedy",
       genre2: "Animation",
-      time: "1h 12m",
-      rating: "7.2",
-      linksTrailer: "#",
+      time: "1h 45m",
+      rating: "6.8",
+      linksTrailer: "https://www.youtube.com/watch?v=CoZqL9N6Rx4&t=2s",
     },
   ];
 
@@ -125,7 +125,7 @@ export default function Carousel() {
                 />
               </svg>
 
-              <p>7,7</p>
+              <p>{currentFilm.rating}</p>
             </div>
 
             <div className="flex items-center gap-2">
@@ -144,7 +144,7 @@ export default function Carousel() {
                 />
               </svg>
 
-              <p>1h 42m</p>
+              <p>{currentFilm.time}</p>
             </div>
           </div>
 

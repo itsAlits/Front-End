@@ -14,7 +14,6 @@ export default function page() {
     director: "",
     releaseYear: "",
     duration: "",
-    usia: "",
     trailer: "",
     imageUrl: "",
     synopsis: "",
@@ -30,21 +29,21 @@ export default function page() {
   };
 
   const handleInsertData = async () => {
-    const endpoint = "http://localhost:3030/film/update";
+    const endpoint = "http://localhost:3030/film/update"; // Update URL to your Fuseki endpoint
     const {
       title,
-      genre,
-      actor,
+      genre, // Comma-separated string: "Action, Adventure, Fantasy, Sci-Fi"
+      actor, // Comma-separated string for multiple actors
       director,
       releaseYear,
       duration,
-      usia,
       trailer,
       imageUrl,
       synopsis,
       rating,
     } = formData;
 
+    // Split the genre and actor strings into arrays
     const genreArray = genre.split(",").map((g) => g.trim());
     const actorArray = actor.split(",").map((a) => a.trim());
 
@@ -54,24 +53,36 @@ export default function page() {
 
       INSERT DATA {
         ex:${title.replace(/\s+/g, "_")} a ex:Film ;
+        
+        // Insert genres as both data and object properties
         ${genreArray
-          .map((g) => `ex:MemilikiGenre ex:${g.replace(/\s+/g, "_")};`)
+          .map(
+            (g) => `
+          ex:MemilikiGenre ex:${g.replace(/\s+/g, "_")} ;
+          ex:Genre "${g}" ;
+        `
+          )
           .join(" ")}
+
+        // Insert actors as object properties
         ${actorArray
-          .map((a) => `ex:DiperankanOleh ex:${a.replace(/\s+/g, "_")};`)
+          .map(
+            (a) => `
+          ex:DiperankanOleh ex:${a.replace(/\s+/g, "_")} ;
+          ex:Nama_Aktor "${a}" ;
+        `
+          )
           .join(" ")}
+
         ex:DisutradaraiOleh ex:${director.replace(/\s+/g, "_")} ;
-        ex:Judul "${title}" ;
-        ex:Rating "${rating}"^^xsd:decimal ;
-        ex:Nama_Aktor "${actor}" ;
-        ex:Image_Url "${imageUrl}" ;
-        ex:Sinopsis "${synopsis}" ;
-        ex:Genre "${genre}" ;
+        ex:Tahun_Rilis "${releaseYear}" ;
         ex:Durasi "${duration}" ;
-        ex:Usia "${usia}" ;
         ex:Trailer "${trailer}" ;
-        ex:Tahun_Rilis "${releaseYear}"^^xsd:gYear ;
-        ex:Nama_Sutradara "${director}" .
+        ex:Image_Url "${imageUrl}" ;
+        ex:Nama_Sutradara "${director}" ;
+        ex:Sinopsis "${synopsis}" ;
+        ex:Rating "${rating}"^^xsd:decimal ;
+        ex:Judul "${title}" .
       }
     `;
 
@@ -83,19 +94,6 @@ export default function page() {
       });
       console.log("Data inserted successfully:", response.data);
       toast.success("Film Berhasil Ditambahkan");
-      setFormData({
-        title: "",
-        genre: "",
-        actor: "",
-        director: "",
-        releaseYear: "",
-        duration: "",
-        usia: "",
-        trailer: "",
-        imageUrl: "",
-        synopsis: "",
-        rating: "",
-      });
     } catch (error) {
       console.error("Error inserting data:", error);
       toast.error("Film Gagal Ditambahkan");
@@ -119,33 +117,45 @@ export default function page() {
         activeIcon3={"currentColor"}
         styleActive3={"mx-2 text-sm font-medium"}
       />
+      {/* topMenuDashboard */}
       <div className="marginkuy fixed z-[97] flex items-center justify-between border-b border-gray-700 py-[20px] text-primary">
         <h1 className="text-3xl font-black">IBLIX</h1>
+        <h2 className="text-2xl font-bold text-white">Tambah Film</h2>
       </div>
 
+      {/* Main content */}
       <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[100px]">
         <form className="flex gap-6 w-full mt-6 text-white">
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full flex  flex-col gap-4">
             <div>
-              <label htmlFor="title">Judul Film</label>
+              <label htmlFor="title">Movie Title</label>
               <input
                 type="text"
                 name="title"
                 id="title"
-                placeholder="Masukan Nama Film"
                 value={formData.title}
                 onChange={handleChange}
                 className="input w-full my-1"
               />
             </div>
             <div>
-              <label htmlFor="genre">Genre (Menggunakan Coma)</label>
+              <label htmlFor="genre">Genre (comma separated)</label>
               <input
                 type="text"
                 name="genre"
                 id="genre"
-                placeholder="Crime, Drama"
                 value={formData.genre}
+                onChange={handleChange}
+                className="input w-full my-1"
+              />
+            </div>
+            <div>
+              <label htmlFor="actor">Actors (comma separated)</label>
+              <input
+                type="text"
+                name="actor"
+                id="actor"
+                value={formData.actor}
                 onChange={handleChange}
                 className="input w-full my-1"
               />
@@ -156,7 +166,6 @@ export default function page() {
                 type="text"
                 name="director"
                 id="director"
-                placeholder="Masukan Nama Sutradara"
                 value={formData.director}
                 onChange={handleChange}
                 className="input w-full my-1"
@@ -168,7 +177,6 @@ export default function page() {
                 type="text"
                 name="releaseYear"
                 id="releaseYear"
-                placeholder="2023"
                 value={formData.releaseYear}
                 onChange={handleChange}
                 className="input w-full my-1"
@@ -180,20 +188,7 @@ export default function page() {
                 type="text"
                 name="duration"
                 id="duration"
-                placeholder="e.g., 1h 38m"
                 value={formData.duration}
-                onChange={handleChange}
-                className="input w-full my-1"
-              />
-            </div>
-            <div>
-              <label htmlFor="usia">Sensor Usia</label>
-              <input
-                type="text"
-                name="usia"
-                id="usia"
-                placeholder="17"
-                value={formData.usia}
                 onChange={handleChange}
                 className="input w-full my-1"
               />
@@ -207,20 +202,7 @@ export default function page() {
                 type="text"
                 name="trailer"
                 id="trailer"
-                placeholder="https://example.com/trailer"
                 value={formData.trailer}
-                onChange={handleChange}
-                className="input w-full my-1"
-              />
-            </div>
-            <div>
-              <label htmlFor="actor">Actors (Menggunakan Coma)</label>
-              <input
-                type="text"
-                name="actor"
-                id="actor"
-                placeholder="Actor1, Actor2"
-                value={formData.actor}
                 onChange={handleChange}
                 className="input w-full my-1"
               />
@@ -231,7 +213,6 @@ export default function page() {
                 type="text"
                 name="imageUrl"
                 id="imageUrl"
-                placeholder="https://example.com/image.jpg"
                 value={formData.imageUrl}
                 onChange={handleChange}
                 className="input w-full my-1"
@@ -243,7 +224,6 @@ export default function page() {
                 type="text"
                 name="synopsis"
                 id="synopsis"
-                placeholder="Masukan Sinopsis Film"
                 value={formData.synopsis}
                 onChange={handleChange}
                 className="input w-full my-1"
@@ -255,7 +235,6 @@ export default function page() {
                 type="text"
                 name="rating"
                 id="rating"
-                placeholder="e.g., 8.5"
                 value={formData.rating}
                 onChange={handleChange}
                 className="input w-full my-1"

@@ -10,20 +10,13 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#efbc00",
-
-          secondary: "#efbc00",
-
+          primary: "#008080",
+          secondary: "#008080",
           accent: "#00ff00",
-
-          neutral: "#efbc00",
-
+          neutral: "#008080",
           info: "#0000ff",
-
           success: "#00ff00",
-
           warning: "#00ff00",
-
           error: "#ff0000",
         },
       },

@@ -50,7 +50,7 @@ export const SidebarAdmin = (props) => {
         <div className="flex flex-1 flex-col justify-between">
           <nav className="-mx-3 space-y-6">
             {/* Fitur menu sidebar */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <label className="px-3 text-xs uppercase text-white">Film</label>
 
               <a className={props.active1} href="/Dashboard/Admin">
@@ -72,7 +72,7 @@ export const SidebarAdmin = (props) => {
                 <span className={props.styleActive1}>Tambah Film</span>
               </a>
 
-              <a className={props.active2} href="Admin/LihatFilm">
+              <a className={props.active2} href="/Dashboard/Admin/LihatFilm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -91,7 +91,7 @@ export const SidebarAdmin = (props) => {
                 <span className={props.styleActive2}>Lihat Film</span>
               </a>
 
-              <a className={props.active3} href="/Pencarian">
+              <a className={props.active3} href="/Dashboard/Admin/DeleteFilm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -107,14 +107,33 @@ export const SidebarAdmin = (props) => {
                   />
                 </svg>
 
-                <span className={props.styleActive3}>Delete Film</span>
+                <span className={props.styleActive3}>Hapus Film</span>
+              </a>
+              <a
+                href="/Dashboard"
+                className="flex w-full transform items-center rounded-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <span className="mx-2 text-sm font-medium">Dashboard</span>
               </a>
             </div>
 
             {/* end fitur menu sidebar */}
 
             {/* account menu sidebar */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <label className="px-3 text-xs uppercase text-white">
                 Account
               </label>

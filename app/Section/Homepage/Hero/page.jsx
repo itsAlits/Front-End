@@ -8,17 +8,18 @@ export default function page() {
         className="heroBg flex min-h-screen w-full items-center px-6 lg:px-12"
       >
         <div>
-          <h1 className="text-7xl font-semibold">Kungfu Panda 4</h1>
-          <p className="mt-4 w-[44%] font-light">
-            Po, sang Pendekar Naga telah melalui tiga petualangan menantang
-            maut. Dia mampu mengalahkan penjahat kelas dunia dengan
-            keberaniannya dan juga kemampuan bela diri yang luar biasa. Hingga
-            akhirnya, Pendekar Naga tersebut ditakdirkan untuk pensiun dan
-            menjadi Spiritual Leader di Lembah Perdamaian. Hal tersebut tentu
-            saja menimbulkan berbagai masalah yang berat baginya.
+          <h1 className="text-7xl font-semibold">The Wild Robot</h1>
+          <p className="mt-4 w-[46%] font-light">
+            The Wild Robot berawal saat kapal kargo bernama Universal Dynamics
+            yang kehilangan 6 robot serbaguna bernama Rozzum, akibat dihantam
+            oleh topan. Semua robot rusak dari kecelakaan, kecuali satu robot
+            Rozzum Unit 7134 yang dijuluki Roz.Roz terdampar di hutan, dan tidak
+            sengaja diaktifkan oleh satwa liar di lingkungan tersebut. Kemudian
+            Roz menawarkan jasa dan bantuan ke hewan-hewan di hutan, tetapi
+            justru membuat mereka ketakutan.
           </p>
           <a
-            href="https://www.youtube.com/watch?v=_inKs4eeHiI"
+            href="https://www.youtube.com/watch?v=67vbA5ZJdKQ"
             target="_blank"
             className="btn btn-primary mt-4 rounded-full text-white"
           >

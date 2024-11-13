@@ -54,6 +54,7 @@ export default function Page() {
           }
         );
         setUser(userResponse.data);
+        console.log(userResponse.data);
       } catch (error) {
         console.error("Error fetching user", error);
       }
@@ -71,6 +72,7 @@ export default function Page() {
             ?film rdf:type d:Film.
             ?film d:Judul ?judul.
             ?film d:Image_Url ?imgUrl.
+            ?film d:Usia ?usia.
             ?film d:Sinopsis ?sinopsis.
             ?film d:Rating ?rating.
             ?film d:Trailer ?trailer.
@@ -95,9 +97,10 @@ export default function Page() {
             id: index, // Using index as a temporary unique key
             title: binding.judul.value,
             imageUrl: binding.imgUrl.value,
-            overview: binding.sinopsis.value, // Placeholder if not available
-            rating: binding.rating.value, // Placeholder if not available
-            trailer: binding.trailer.value, // Placeholder if not available
+            overview: binding.sinopsis.value,
+            rating: binding.rating.value,
+            usia: parseInt(binding.usia.value),
+            trailer: binding.trailer.value,
           })
         );
 
@@ -132,43 +135,34 @@ export default function Page() {
       {/* Top Menu Dashboard */}
       <div className="marginkuy fixed z-[97] flex items-center bg-[#151515] justify-between border-b border-gray-700 py-[20px] text-primary">
         <h1 className="text-3xl font-black">IBLIX</h1>
-        <div className="w-[22%] text-right">
-          <div className="relative hidden md:block">
-            <input
-              type="text"
-              id="search-navbar"
-              className="block w-full rounded-lg border p-3 ps-10 text-sm dark:border-gray-600 dark:bg-[#191919] dark:text-white dark:placeholder-gray-400"
-              placeholder="Search..."
-            />
-          </div>
+        <div className="text-right">
+          <h1 className="text-[18px]">
+            <span className=" text-white">Hi, </span>
+            {user ? user.username : "Username"}
+          </h1>
         </div>
       </div>
 
       <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[100px]">
-        <div className="my-5">
-          <h2 className="text-[26px] font-bold text-white">
-            <span className="font-black text-primary">Halo, </span>
-            {user ? user.username : "Username"}
-          </h2>
-          <p className="text-[16px] text-white">
-            Hari ini, Nonton Film Apa Ya...
-          </p>
+        <div className="my-8">
           <Carousel />
         </div>
 
         <div className="mt-10">
           <h1 className="text-2xl font-extrabold text-white">Explore Now</h1>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
-            {film.map((film) => (
-              <CardFilm
-                key={film.id}
-                desc={truncateText(film.overview)}
-                links={film.imageUrl}
-                vote={film.rating}
-                namaFilm={film.title}
-                trailer={film.trailer}
-              />
-            ))}
+            {film
+              .filter((film) => user && user.umur >= film.usia) // Filter films based on user's age
+              .map((film) => (
+                <CardFilm
+                  key={film.id}
+                  desc={truncateText(film.overview)}
+                  links={film.imageUrl}
+                  vote={film.rating}
+                  namaFilm={film.title}
+                  trailer={film.trailer}
+                />
+              ))}
           </div>
         </div>
       </div>

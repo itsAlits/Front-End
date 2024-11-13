@@ -16,92 +16,90 @@ export default function Marque() {
       <div className="relative z-10">
         <div>
           <Marquee>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Website ini mudah digunakan, dengan tampilan yang simpel dan
+                navigasi yang jelas.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Desain modern dan responsif, nyaman digunakan di ponsel maupun
+                komputer.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Fitur unik ini membantu menemukan film yang cocok sesuai mood,
+                meskipun kadang kurang akurat.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Filter genre dan rating mempermudah pencarian film sesuai
+                selera.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Menawarkan banyak pilihan film dari berbagai genre dan tahun
+                rilis.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Website ini ringan dan memuat halaman dengan cepat.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Desain yang minimalis membuat pengalaman lebih fokus ke film.
               </p>
             </div>
           </Marquee>
         </div>
         <div className="mt-4">
           <Marquee direction={"right"}>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Selalu menampilkan film-film terbaru, cocok untuk pencinta film
+                yang ingin up-to-date.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Fitur ini membantu menemukan film berkualitas dengan rating
+                tinggi dari pengguna lain.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Desain yang simpel membuat situs ini mudah dipahami dan bebas
+                dari gangguan.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Tersedia mode gelap yang nyaman untuk mata, terutama saat
+                browsing malam hari.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Memberikan informasi rating dari berbagai sumber, seperti IMDb
+                dan Rotten Tomatoes.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Setiap film dilengkapi dengan deskripsi, pemain, dan ulasan,
+                jadi tidak perlu cari info tambahan.
               </p>
             </div>
-            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex items-center text-center py-2">
+            <div className="border ms-4 h-44 rounded border-[#303030] bg-[#202020] w-96 px-4 flex justify-center items-center text-center py-2">
               <p className="text-sm">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque voluptas dolore labore placeat ipsam. Odio neque
+                Navigasi intuitif membuat pengguna tidak kebingungan saat
+                mencari film
               </p>
             </div>
           </Marquee>
