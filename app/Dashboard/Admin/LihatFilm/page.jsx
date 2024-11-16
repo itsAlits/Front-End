@@ -109,15 +109,15 @@ export default function Page() {
     <div className="min-h-screen">
       <SidebarAdmin
         active1={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform k-lg hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon1={"currentColor"}
         styleActive1={"mx-2 text-sm font-medium"}
-        active2={"flex items-center px-3 py-3 bg-primary transform rounded-lg"}
+        active2={"flex items-center px-3 py-3 bg-primary transform k-lg"}
         activeIcon2={"#ffffff"}
         styleActive2={"mx-2 text-sm font-medium text-white"}
         active3={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform k-lg hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon3={"currentColor"}
         styleActive3={"mx-2 text-sm font-medium"}

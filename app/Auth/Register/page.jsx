@@ -73,9 +73,9 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-primary">Daftar</h1>
             <form onSubmit={handleSubmit}>
               {/* form */}
-              <div className="gap-2 xl:flex">
+              <div className="gap-2 rounded-none   xl:flex">
                 <div className="w-full">
-                  <label className="input  my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2 rounded-none  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -93,7 +93,7 @@ export default function Home() {
                       required
                     />
                   </label>
-                  <label className="input  my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2 rounded-none  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -120,7 +120,7 @@ export default function Home() {
                   </label>
                 </div>
                 <div className="w-full">
-                  <label className="input  my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2 rounded-none  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -142,7 +142,7 @@ export default function Home() {
                       required
                     />
                   </label>
-                  <label className="input  my-3 flex items-center gap-2">
+                  <label className="input  my-3 flex items-center gap-2 rounded-none  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -170,7 +170,7 @@ export default function Home() {
               {/* end form */}
               <button
                 type="submit"
-                className="btn btn-primary mb-3 mt-6 w-full text-white"
+                className="btn btn-primary mb-3 mt-4 w-full rounded-none text-white"
               >
                 Daftar
                 <svg

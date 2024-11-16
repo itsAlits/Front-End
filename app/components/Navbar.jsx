@@ -48,7 +48,7 @@ const Navbar = (props) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 k-box bg-base-100 p-2 shadow"
             >
               <li>
                 <a href="/">Home</a>
@@ -97,7 +97,7 @@ const Navbar = (props) => {
         <div className="navbar-end hidden lg:flex">
           <a
             href="/Auth/Login"
-            className="btn btn-primary btn-sm px-4 font-normal text-white"
+            className="btn btn-primary btn-sm px-6 font-normal rounded-none text-white"
           >
             Login
           </a>

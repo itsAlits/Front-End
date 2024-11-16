@@ -201,19 +201,26 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Sidebar
-        active2={"flex items-center px-3 py-3 bg-primary transform rounded-lg"}
+        active2={
+          "flex items-center px-3 py-3 bg-primary transform rounded-none"
+        }
         activeIcon2={"#ffffff"}
         styleActive2={"mx-2 text-sm font-medium text-white"}
         active1={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon1={"currentColor"}
         styleActive1={"mx-2 text-sm font-medium"}
         active3={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon3={"currentColor"}
         styleActive3={"mx-2 text-sm font-medium"}
+        active4={
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
+        }
+        activeIcon4={"currentColor"}
+        styleActive4={"mx-2 text-sm font-medium"}
       />
 
       {/* Top Menu Dashboard */}
@@ -228,20 +235,20 @@ export default function Page() {
       </div>
 
       {/* Main Content */}
-      <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[100px]">
+      <div id="mainCanvas" className="px-[24px] pb-[30px] pt-[80px]">
         <div className="my-5 text-xl">
           <div className="text-white">
             <h1 className="text-[24px]">Kriteria Rekomendasi</h1>
-            <p className="text-[16px] text-white/70">
+            {/* <p className="text-[16px] text-white/70">
               Masukan Kriteria Untuk Menentukan Rekomendasi Yang Cocok Untuk
               Kamu Berdasarkan Kriteria yang kamu pilih
-            </p>
+            </p> */}
           </div>
           <div className="flex gap-4 mt-4">
             <div className="flex gap-3 flex-col w-full">
               {/* Year Select */}
               <select
-                className="select select-bordered w-full bg-[#151515] text-white border-gray-500"
+                className="select focus:border-none rounded-none focus:outline-none  w-full bg-[#202020] text-white "
                 value={selectedCriteria.year}
                 onChange={(e) =>
                   setSelectedCriteria({
@@ -260,7 +267,7 @@ export default function Page() {
 
               {/* Genre Select */}
               <select
-                className="select select-bordered w-full bg-[#151515] text-white border-gray-500"
+                className="select focus:border-none rounded-none focus:outline-none  w-full bg-[#202020] text-white "
                 value={selectedCriteria.genre}
                 onChange={(e) =>
                   setSelectedCriteria({
@@ -280,7 +287,7 @@ export default function Page() {
             <div className="flex gap-3 flex-col w-full">
               {/* Director Select */}
               <select
-                className="select select-bordered w-full bg-[#151515] text-white border-gray-500"
+                className="select focus:border-none rounded-none focus:outline-none  w-full bg-[#202020] text-white "
                 value={selectedCriteria.director}
                 onChange={(e) =>
                   setSelectedCriteria({
@@ -299,7 +306,7 @@ export default function Page() {
 
               {/* Actor Select */}
               <select
-                className="select select-bordered w-full bg-[#151515] text-white border-gray-500"
+                className="select focus:border-none rounded-none focus:outline-none  w-full bg-[#202020] text-white "
                 value={selectedCriteria.actor}
                 onChange={(e) =>
                   setSelectedCriteria({
@@ -319,7 +326,7 @@ export default function Page() {
           </div>
           <button
             onClick={handleGenerateRecommendations}
-            className="mt-5 btn btn-primary w-full bg-primary text-white"
+            className="mt-5 btn btn-primary rounded-none w-full bg-primary text-white"
           >
             Generate Recommendations
           </button>

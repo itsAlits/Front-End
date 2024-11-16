@@ -12,6 +12,7 @@
     "axios": "^1.7.7",
     "jwt-decode": "^4.0.0",
     "next": "14.2.13",
+    "openai": "^4.72.0",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",

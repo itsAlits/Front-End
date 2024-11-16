@@ -74,6 +74,25 @@ export const Sidebar = (props) => {
                 <span className={props.styleActive1}>Dashboard</span>
               </a>
 
+              <a className={props.active3} href="/Penelusuran">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke={props.activeIcon3}
+                  className="h-5 w-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+
+                <span className={props.styleActive3}>Penelusuran</span>
+              </a>
+
               <a className={props.active2} href="/Rekomendasi">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,24 +117,24 @@ export const Sidebar = (props) => {
                 <span className={props.styleActive2}>Rekomendasi</span>
               </a>
 
-              {/* <a className={props.active3} href="/Pencarian">
+              <a className={props.active4} href="/ai">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke={props.activeIcon3}
-                  className="h-5 w-5"
+                  stroke-width="1.5"
+                  stroke={props.activeIcon4}
+                  class="size-6"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
                   />
                 </svg>
 
-                <span className={props.styleActive3}>Pencarian</span>
-              </a> */}
+                <span className={props.styleActive4}>Recomendation By AI</span>
+              </a>
             </div>
 
             {/* end fitur menu sidebar */}
@@ -128,7 +147,7 @@ export const Sidebar = (props) => {
 
               <button
                 onClick={RemoveJwt}
-                className="flex w-full transform items-center rounded-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                className="flex w-full transform items-center k-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +169,7 @@ export const Sidebar = (props) => {
             </div>
             {/* end account menu sidebar */}
             <div className="absolute bottom-8 left-0 w-full text-white">
-              <div className="mx-3 rounded-lg bg-[#202020] px-3 py-4">
+              <div className="mx-3 k-lg bg-[#202020] px-3 py-4">
                 <div>
                   <p className="text-[14px] font-bold">
                     {user ? user.username : "username"}

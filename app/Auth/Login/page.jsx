@@ -59,7 +59,7 @@ export default function Home() {
 
             <form onSubmit={handleSubmit}>
               {/* form */}
-              <label className="input my-3 flex items-center gap-2">
+              <label className="input my-3 flex items-center gap-2 rounded-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -70,14 +70,14 @@ export default function Home() {
                 </svg>
                 <input
                   type="email"
-                  className="grow"
+                  className="grow rounded-none"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setemail(e.target.value)}
                   required
                 />
               </label>
-              <label className="input flex items-center gap-2">
+              <label className="input flex items-center gap-2 rounded-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -102,7 +102,7 @@ export default function Home() {
               {/* end form */}
               <button
                 type="submit"
-                className="btn btn-primary mb-3 mt-6 w-full text-white"
+                className="btn rounded-none btn-primary mb-3 mt-4 w-full text-white"
               >
                 Masuk
                 <svg

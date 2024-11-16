@@ -33,10 +33,19 @@ body {
 
 .marginkuy {
   width: 100%;
-  padding-left: 300px;
-  padding-right: 40px;
+  padding-left: 280px;
+  padding-right: 24px;
+}
+
+.marginkuy2 {
+  width: 100%;
+  padding-right: 300px;
 }
 
 #mainCanvas {
-  padding-left: 300px;
+  padding-left: 280px;
+}
+
+#mainCanvas2 {
+  padding-left: 280px;
 }

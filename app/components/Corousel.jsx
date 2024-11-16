@@ -66,7 +66,7 @@ export default function Carousel() {
   const currentFilm = films[currentIndex];
 
   return (
-    <div className="relative mt-4 h-[600px] overflow-hidden rounded-3xl">
+    <div className="relative mt-4 h-[600px] overflow-hidden">
       {/* Black Fade Overlay */}
       <div
         className={`absolute inset-0 bg-black transition-opacity duration-700 ease-in-out ${
@@ -88,17 +88,17 @@ export default function Carousel() {
         }`}
       >
         <div className="px-20 text-white">
-          <p className="text-md badge badge-primary badge-md py-3 text-white">
+          <p className="text-md badge badge-primary rounded-none badge-md py-4 text-white">
             🔥New Populer
           </p>
         </div>
         <div className="w-auto px-20 text-white">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <p className="badge badge-primary py-3 text-white">
+              <p className="badge badge-primary rounded-none py-4 text-white">
                 {currentFilm.genre1}
               </p>
-              <p className="badge badge-primary py-3 text-white">
+              <p className="badge badge-primary rounded-none py-4 text-white">
                 {currentFilm.genre2}
               </p>
             </div>
@@ -150,7 +150,7 @@ export default function Carousel() {
 
           <a
             href={currentFilm.linksTrailer}
-            className="btn btn-primary mt-5 rounded-full text-white"
+            className="btn btn-primary mt-5 rounded-none text-white"
           >
             Watch Trailer
             <svg

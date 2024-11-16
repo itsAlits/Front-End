@@ -10,7 +10,7 @@ export default function CardFilm({
     <a href={trailer} target="_blank">
       <div className="group cursor-pointer" onClick={onClick}>
         {/* Container with hover effect */}
-        <div className="group relative mt-4 h-auto w-full overflow-hidden rounded">
+        <div className="group relative mt-4 h-auto w-full overflow-hidden">
           {/* Image */}
           <img
             className="h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-70"
@@ -18,7 +18,7 @@ export default function CardFilm({
             alt="gambar"
           />
           {/* time */}
-          <div className="absolute right-0 top-0 z-50 rounded-bl bg-primary px-2 py-1 text-[12px] font-medium text-white">
+          <div className="absolute right-0 top-0 z-50 k-bl bg-primary px-2 py-1 text-[12px] font-medium text-white">
             <div className="flex items-center gap-[2px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -111,7 +111,7 @@ export const SidebarAdmin = (props) => {
               </a>
               <a
                 href="/Dashboard"
-                className="flex w-full transform items-center rounded-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                className="flex w-full transform items-center k-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ export const SidebarAdmin = (props) => {
 
               <button
                 onClick={RemoveJwt}
-                className="flex w-full transform items-center rounded-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                className="flex w-full transform items-center k-lg px-3 py-3 text-white transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +162,7 @@ export const SidebarAdmin = (props) => {
             </div>
             {/* end account menu sidebar */}
             <div className="absolute bottom-8 left-0 w-full text-white">
-              <div className="mx-3 rounded-lg bg-[#202020] px-3 py-4">
+              <div className="mx-3 k-lg bg-[#202020] px-3 py-4">
                 <div>
                   <p className="text-[14px] font-bold">
                     {user ? user.username : "username"}

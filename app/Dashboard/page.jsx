@@ -117,19 +117,26 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Sidebar
-        active1={"flex items-center px-3 py-3 bg-primary transform rounded-lg"}
+        active1={
+          "flex items-center px-3 py-3 bg-primary transform rounded-none"
+        }
         activeIcon1={"#ffffff"}
         styleActive1={"mx-2 text-sm font-medium text-white"}
         active2={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon2={"currentColor"}
         styleActive2={"mx-2 text-sm font-medium"}
         active3={
-          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
         }
         activeIcon3={"currentColor"}
         styleActive3={"mx-2 text-sm font-medium"}
+        active4={
+          "flex items-center px-3 py-3 text-white transition-colors duration-300 transform rounded-none hover:bg-gray-100 hover:text-gray-700"
+        }
+        activeIcon4={"currentColor"}
+        styleActive4={"mx-2 text-sm font-medium"}
       />
 
       {/* Top Menu Dashboard */}
@@ -143,7 +150,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[100px]">
+      <div id="mainCanvas" className="px-[24px] pb-[30px] pt-[80px]">
         <div className="my-8">
           <Carousel />
         </div>

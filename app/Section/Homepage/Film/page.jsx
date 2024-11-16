@@ -1,7 +1,55 @@
 import React from "react";
 import TrailerSection from "../Trailer2/Trailer";
 
-export default function page() {
+// Reusable FilmSection Component
+function FilmSection({ id, title, films }) {
+  return (
+    <section id={id} className="w-full py-10">
+      <div className="mt-[-40px] px-6 lg:px-12">
+        <div className="flex items-center justify-between pb-4">
+          <div>
+            <h1 className="text-2xl font-semibold text-white">{title}</h1>
+          </div>
+          <a className="flex gap-2" href="/Login">
+            See More{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
+          {films.map((film, index) => (
+            <a
+              key={index}
+              href="Auth/Login"
+              className="hover:-translate-y-3 transition-all"
+            >
+              <img
+                className="h-full w-full object-cover"
+                src={film.image}
+                alt={`Film ${index}`}
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Main Page Component
+export default function Page() {
   const trendFilms = [
     {
       image:
@@ -27,9 +75,7 @@ export default function page() {
       image:
         "https://m.media-amazon.com/images/M/MV5BMTAxNDYxMjg0MjNeQTJeQWpwZ15BbWU3MDcyNTk2OTM@._V1_QL75_UX820_.jpg",
     },
-    {
-      image: "https://i.ebayimg.com/images/g/Ud0AAOSwtGRdbAnm/s-l400.jpg",
-    },
+    { image: "https://i.ebayimg.com/images/g/Ud0AAOSwtGRdbAnm/s-l400.jpg" },
     {
       image:
         "https://i.redd.it/banned-pixar-movie-posters-animated-scenes-in-comments-v0-62vwm0m4usub1.png?width=960&format=png&auto=webp&s=cd18c3366fd0f6f0d5f5ac316b47868598bff577",
@@ -72,9 +118,7 @@ export default function page() {
       image:
         "https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/HGQAAOSwO6haj7GA/$_57.JPG?set_id=8800005007",
     },
-    {
-      image: "https://pbs.twimg.com/media/FvOOIiMWwAArKxF.jpg:large",
-    },
+    { image: "https://pbs.twimg.com/media/FvOOIiMWwAArKxF.jpg:large" },
     {
       image:
         "https://i.pinimg.com/736x/b6/ef/fa/b6effa2f53051ff0cb9c318a0d162da1.jpg",
@@ -91,136 +135,21 @@ export default function page() {
       image:
         "https://photogallery.indiatimes.com/movies/international/rio-2/photo/33383947/Poster-of-Hollywood-3D-computer-animated-musical-adventure-comedy-film-Rio-2-.jpg",
     },
-    {
-      image: "https://i.ebayimg.com/images/g/OLgAAOSwe-phZOzF/s-l1200.jpg",
-    },
+    { image: "https://i.ebayimg.com/images/g/OLgAAOSwe-phZOzF/s-l1200.jpg" },
   ];
 
   return (
-    <div>
-      <section id="MovieTranding" className="w-full py-10">
-        <div className="mt-[-200px] px-6 lg:px-12">
-          <div className="flex items-center justify-between pb-4">
-            <div>
-              <h1 className="text-2xl font-semibold text-white">
-                Wajib Ditonton
-              </h1>
-            </div>
-            <a className="flex gap-2" href="/Login">
-              See More{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
-            {trendFilms.map((film, index) => (
-              <a href="Auth/Login" className=" hover:scale-105 transition-all">
-                <img
-                  key={index}
-                  className="h-full w-full rounded object-cover"
-                  src={film.image}
-                  alt={`Film ${index}`}
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    <div className="-mt-28">
+      <FilmSection
+        id="MovieTranding"
+        title="Wajib Ditonton"
+        films={trendFilms}
+      />
       <div className="mb-10">
         <TrailerSection />
       </div>
-
-      <section id="NewTranding" className="w-full py-10">
-        <div className="mt-[-40px] px-6 lg:px-12">
-          <div className="flex items-center justify-between pb-4">
-            <div>
-              <h1 className="text-2xl font-semibold text-white">Baru Keluar</h1>
-            </div>
-            <a className="flex gap-2" href="/Login">
-              See More{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
-            {newFilms.map((film, index) => (
-              <a href="Auth/Login" className=" hover:scale-105 transition-all">
-                <img
-                  key={index}
-                  className="h-full w-full rounded object-cover"
-                  src={film.image}
-                  alt={`Film ${index}`}
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="KidsTranding" className="w-full py-10">
-        <div className="mt-[-40px] px-6 lg:px-12">
-          <div className="flex items-center justify-between pb-4">
-            <div>
-              <h1 className="text-2xl font-semibold text-white">Untuk Anak</h1>
-            </div>
-            <a className="flex gap-2" href="/Login">
-              See More{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
-            {kidsFilms.map((film, index) => (
-              <a href="Auth/Login" className=" hover:scale-105 transition-all">
-                <img
-                  key={index}
-                  className="h-full w-full rounded object-cover"
-                  src={film.image}
-                  alt={`Film ${index}`}
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FilmSection id="NewTranding" title="Baru Keluar" films={newFilms} />
+      <FilmSection id="KidsTranding" title="Untuk Anak" films={kidsFilms} />
     </div>
   );
 }

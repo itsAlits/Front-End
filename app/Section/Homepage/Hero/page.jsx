@@ -21,7 +21,7 @@ export default function page() {
           <a
             href="https://www.youtube.com/watch?v=67vbA5ZJdKQ"
             target="_blank"
-            className="btn btn-primary mt-4 rounded-full text-white"
+            className="btn btn-primary rounded-none mt-4 text-white"
           >
             Tonton Trailer
             <svg
@@ -46,7 +46,7 @@ export default function page() {
           </a>
           <a
             href=""
-            className="btn ms-2 mt-4 rounded-full bg-transparent border-white hover:bg-[#151515] text-white"
+            className="btn ms-2 mt-4 rounded-none bg-transparent border-white hover:bg-[#151515] text-white"
           >
             Selengkapnya
             <svg
