@@ -142,13 +142,13 @@ export default function Page() {
     <div className="-mt-28">
       <FilmSection
         id="MovieTranding"
-        title="Wajib Ditonton"
+        title="Harus Ditonton"
         films={trendFilms}
       />
       <div className="mb-10">
         <TrailerSection />
       </div>
-      <FilmSection id="NewTranding" title="Baru Keluar" films={newFilms} />
+      <FilmSection id="NewTranding" title="Baru Tayang" films={newFilms} />
       <FilmSection id="KidsTranding" title="Untuk Anak" films={kidsFilms} />
     </div>
   );

@@ -92,7 +92,7 @@ export default function Page() {
                 id="title"
                 value={formData.title}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input rounded-none w-full my-1"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Page() {
         <div>
           <button
             onClick={handleDeleteData}
-            className="btn btn-primary my-4 text-white"
+            className="btn rounded-none btn-primary my-4 text-white"
           >
             Hapus Film
           </button>

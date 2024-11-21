@@ -123,7 +123,7 @@ export default function page() {
         <h1 className="text-3xl font-black">IBLIX</h1>
       </div>
 
-      <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[100px]">
+      <div id="mainCanvas" className="px-[40px] pb-[30px] pt-[80px]">
         <form className="flex gap-6 w-full mt-6 text-white">
           <div className="w-full flex flex-col gap-4">
             <div>
@@ -135,7 +135,7 @@ export default function page() {
                 placeholder="Masukan Nama Film"
                 value={formData.title}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -147,7 +147,7 @@ export default function page() {
                 placeholder="Crime, Drama"
                 value={formData.genre}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -159,7 +159,7 @@ export default function page() {
                 placeholder="Masukan Nama Sutradara"
                 value={formData.director}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -171,7 +171,7 @@ export default function page() {
                 placeholder="2023"
                 value={formData.releaseYear}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -183,7 +183,7 @@ export default function page() {
                 placeholder="e.g., 1h 38m"
                 value={formData.duration}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -195,7 +195,7 @@ export default function page() {
                 placeholder="17"
                 value={formData.usia}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function page() {
                 placeholder="https://example.com/trailer"
                 value={formData.trailer}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -222,7 +222,7 @@ export default function page() {
                 placeholder="Actor1, Actor2"
                 value={formData.actor}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -234,7 +234,7 @@ export default function page() {
                 placeholder="https://example.com/image.jpg"
                 value={formData.imageUrl}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -246,7 +246,7 @@ export default function page() {
                 placeholder="Masukan Sinopsis Film"
                 value={formData.synopsis}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
             <div>
@@ -258,7 +258,7 @@ export default function page() {
                 placeholder="e.g., 8.5"
                 value={formData.rating}
                 onChange={handleChange}
-                className="input w-full my-1"
+                className="input w-full rounded-none my-1"
               />
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function page() {
         <div>
           <button
             onClick={handleInsertData}
-            className="btn btn-primary my-4 text-white"
+            className="btn rounded-none btn-primary my-4 text-white"
           >
             Insert Movie Data
           </button>

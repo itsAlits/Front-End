@@ -117,7 +117,7 @@ export const Sidebar = (props) => {
                 <span className={props.styleActive2}>Rekomendasi</span>
               </a>
 
-              <a className={props.active4} href="/ai">
+              {/* <a className={props.active4} href="/ai">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -134,7 +134,7 @@ export const Sidebar = (props) => {
                 </svg>
 
                 <span className={props.styleActive4}>Recomendation By AI</span>
-              </a>
+              </a> */}
             </div>
 
             {/* end fitur menu sidebar */}
