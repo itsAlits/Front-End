@@ -48,10 +48,13 @@ const Navbar = (props) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 k-box bg-base-100 p-2 shadow"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 k-box bg-[#222222] p-2 shadow"
             >
               <li>
                 <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/about">About Me</a>
               </li>
               <li>
                 <a>Feature</a>
@@ -63,9 +66,6 @@ const Navbar = (props) => {
                     <a>Submenu 2</a>
                   </li>
                 </ul>
-              </li>
-              <li>
-                <a>About Us</a>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ const Navbar = (props) => {
               </details>
             </li>
             <li>
-              <a>About Us</a>
+              <a href="/about">About Me</a>
             </li>
           </ul>
         </div>

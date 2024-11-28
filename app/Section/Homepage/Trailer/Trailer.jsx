@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const trailers = [
   {
@@ -57,33 +60,68 @@ const trailers = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export default function TrailerGrid() {
   return (
-    <div className="px-12">
-      <h1 className="text-2xl font-semibold text-white">
+    <div className="px-6 lg:px-12">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl font-semibold text-white"
+      >
         Trailer Film Terpopuler
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-4 group">
+      </motion.h1>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-4 group"
+      >
         {trailers.map((trailer, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={item}
             className="TrailerContainer relative overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg group-hover:grayscale hover:!grayscale-0"
           >
-            <a href={trailer.link} className="block" target="_blank">
+            <a href={trailer.link} className="block" target="_blank" rel="noopener noreferrer">
               <div className="relative">
-                {/* Trailer Image */}
-                <img
+                <motion.img
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
                   src={trailer.imageUrl}
                   alt={trailer.title}
-                  className="w-full h-full object-cover transition duration-300 ease-in-out"
+                  className="w-full h-full object-cover"
                 />
-                {/* Black overlay effect only on hover */}
                 <div className="absolute inset-0 bg-black/10 opacity-0 transition duration-300"></div>
               </div>
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

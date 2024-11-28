@@ -1,16 +1,38 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import TrailerSection from "../Trailer2/Trailer";
 
 // Reusable FilmSection Component
 function FilmSection({ id, title, films }) {
   return (
     <section id={id} className="w-full py-10">
-      <div className="mt-[-40px] px-6 lg:px-12">
-        <div className="flex items-center justify-between pb-4">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8 }}
+        className="mt-[-40px] px-6 lg:px-12"
+      >
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center justify-between pb-4"
+        >
           <div>
             <h1 className="text-2xl font-semibold text-white">{title}</h1>
           </div>
-          <a className="flex gap-2" href="/Login">
+          <motion.a 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="flex gap-2" 
+            href="/Login"
+          >
             See More{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +48,16 @@ function FilmSection({ id, title, films }) {
                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
               />
             </svg>
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
           {films.map((film, index) => (
-            <a
+            <motion.a
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               href="Auth/Login"
               className="hover:-translate-y-3 transition-all"
             >
@@ -40,10 +66,10 @@ function FilmSection({ id, title, films }) {
                 src={film.image}
                 alt={`Film ${index}`}
               />
-            </a>
+            </motion.a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
