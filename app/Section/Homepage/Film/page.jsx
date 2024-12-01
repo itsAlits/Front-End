@@ -9,15 +9,15 @@ function FilmSection({ id, title, films }) {
   return (
     <section id={id} className="w-full py-10">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8 }}
         className="mt-[-40px] px-6 lg:px-12"
       >
         <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
           className="flex items-center justify-between pb-4"
@@ -26,8 +26,8 @@ function FilmSection({ id, title, films }) {
             <h1 className="text-2xl font-semibold text-white">{title}</h1>
           </div>
           <motion.a 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
             className="flex gap-2" 
@@ -54,8 +54,8 @@ function FilmSection({ id, title, films }) {
           {films.map((film, index) => (
             <motion.a
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               href="Auth/Login"

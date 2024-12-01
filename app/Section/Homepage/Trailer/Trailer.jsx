@@ -72,10 +72,9 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0 },
   show: { 
-    opacity: 1, 
-    y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5,
     },
@@ -86,8 +85,8 @@ export default function TrailerGrid() {
   return (
     <div className="px-6 lg:px-12">
       <motion.h1 
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.5 }}
         className="text-2xl font-semibold text-white"

@@ -62,15 +62,15 @@ const trailers = [
 export default function TrailerGrid() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: false }}
       transition={{ duration: 0.8 }}
       className=" px-6 lg:px-12"
     >
       <motion.h1
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8 }}
         className="text-2xl font-semibold text-white"
@@ -81,8 +81,8 @@ export default function TrailerGrid() {
         {trailers.map((trailer, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="TrailerContainer relative overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg group-hover:grayscale hover:!grayscale-0"
