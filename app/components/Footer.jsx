@@ -24,7 +24,7 @@ export default function Footer() {
           >
             <h3 className="text-xl font-semibold mb-4">About Us</h3>
             <p className="text-gray-400 text-sm w-full sm:w-4/5 md:w-2/3 mb-6 sm:mb-0">
-              The Wild Robot adalah website yang menyediakan informasi tentang film animasi. Kami berkomitmen untuk memberikan pengalaman terbaik bagi pencinta film animasi.
+              IBLIX adalah website yang menyediakan Rekomendasi film, Kami berkomitmen untuk memberikan pengalaman terbaik bagi pencinta filmi.
             </p>
           </motion.div>
 
@@ -40,7 +40,6 @@ export default function Footer() {
             <ul className="text-gray-400 text-sm space-y-3">
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Movies</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">TV Shows</a></li>
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
             </ul>
           </motion.div>
@@ -55,9 +54,9 @@ export default function Footer() {
           >
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <ul className="text-gray-400 text-sm space-y-3">
-              <li>Email: info@thewildrobot.com</li>
-              <li>Phone: +62 123 456 789</li>
-              <li>Address: Jl. Raya Bogor KM 46</li>
+              <li>Email: info@iblix.com</li>
+              <li>Phone: +62 853 3351 5158</li>
+              <li>Address: GIanyar, Bali</li>
             </ul>
           </motion.div>
 
@@ -98,7 +97,7 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="border-t border-gray-800 mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm"
         >
-          <p>&copy; 2024 The Wild Robot. All rights reserved.</p>
+          <p>&copy; 2024 IBLIX. All rights reserved.</p>
         </motion.div>
       </div>
     </motion.footer>
