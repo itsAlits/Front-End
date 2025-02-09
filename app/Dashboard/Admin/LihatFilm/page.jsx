@@ -143,8 +143,8 @@ export default function Page() {
                 <th className="px-4 py-2">Overview</th>
                 <th className="px-4 py-2">Rating</th>
                 <th className="px-4 py-2">Genre</th>
-                <th className="px-4 py-2">Actor</th>
-                <th className="px-4 py-2">Director</th>
+                {/* <th className="px-4 py-2">Actor</th>
+                <th className="px-4 py-2">Director</th> */}
                 <th className="px-4 py-2">Release Year</th>
                 <th className="px-4 py-2">Durasi Film</th>
                 <th className="px-4 py-2">Usia</th>
@@ -169,8 +169,8 @@ export default function Page() {
                     </td>
                     <td className="px-4 py-2">{movie.rating}</td>
                     <td className="px-4 py-2">{movie.genre}</td>
-                    <td className="px-4 py-2">{movie.actor}</td>
-                    <td className="px-4 py-2">{movie.director}</td>
+                    {/* <td className="px-4 py-2">{movie.actor}</td>
+                    <td className="px-4 py-2">{movie.director}</td> */}
                     <td className="px-4 py-2">{movie.releaseYear}</td>
                     <td className="px-4 py-2">{movie.durasi}</td>
                     <td className="px-4 py-2">{movie.usia}</td>

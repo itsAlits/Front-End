@@ -49,7 +49,7 @@ const itemVariants = {
 const TechStackCard = ({ title, technologies }) => (
   <motion.div
     variants={itemVariants}
-    className="card bg-[#151515] hover:bg-[#191919] transition-all duration-300"
+    className="card bg-[#151515]"
   >
     <div className="card-body p-6">
       <h3 className="text-xl font-bold text-primary mb-4">{title}</h3>
@@ -169,10 +169,7 @@ export default function AboutUs() {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <span className="px-3 py-1 bg-primary/20 rounded-full text-primary text-sm">
-                      Proyek Selesai
-                    </span>
-                    <span className="px-3 py-1 bg-primary/20 rounded-full text-primary text-sm">
-                      Platform Animasi
+                      Platform Rekomendasi Film
                     </span>
                     <span className="px-3 py-1 bg-primary/20 rounded-full text-primary text-sm">
                       Teknologi Web Modern
@@ -451,7 +448,7 @@ export default function AboutUs() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:alitwiradhanta@gmail.com"
+                href="mailto:alitwiradhanta094@student.unud.ac.id"
                 className="btn btn-primary gap-2 w-full sm:w-auto"
               >
                 <svg

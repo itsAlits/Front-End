@@ -81,16 +81,16 @@ const Navbar = (props) => {
                 <summary>Feature</summary>
                 <ul className="p-2 w-36 bg-[#222222]">
                   <li>
-                    <a href="Auth/Login">Dashboard</a>
+                    <a href="/Auth/Login">Dashboard</a>
                   </li>
                   <li>
-                    <a href="Auth/Login">Rekomendasi</a>
+                    <a href="/Auth/Login">Rekomendasi</a>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <a href="/about">About Me</a>
+              <a href="/about">About Project</a>
             </li>
           </ul>
         </div>
@@ -99,7 +99,7 @@ const Navbar = (props) => {
             href="/Auth/Login"
             className="btn btn-primary btn-sm px-6 font-normal rounded-none text-white"
           >
-            Login
+            Masuk
           </a>
         </div>
       </div>
